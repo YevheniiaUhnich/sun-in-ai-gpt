@@ -1,0 +1,131 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    overflow: hidden;
+}
+
+.solar-system {
+    position: relative;
+    width: 800px;
+    height: 800px;
+}
+
+.sun {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, #ffd700, #ff8c00);
+    border-radius: 50%;
+    box-shadow: 0 0 50px #ff8c00;
+}
+
+.orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 1px dashed rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.planet {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform-origin: center;
+}
+
+/* Mercury */
+.orbit-mercury {
+    width: 200px;
+    height: 200px;
+}
+
+.mercury {
+    width: 20px;
+    height: 20px;
+    background-color: #A9A9A9;
+    animation: orbit 2.4s linear infinite;
+}
+
+/* Venus */
+.orbit-venus {
+    width: 300px;
+    height: 300px;
+}
+
+.venus {
+    width: 30px;
+    height: 30px;
+    background-color: #E6E6FA;
+    animation: orbit 6.2s linear infinite;
+}
+
+/* Earth */
+.orbit-earth {
+    width: 400px;
+    height: 400px;
+}
+
+.earth {
+    width: 35px;
+    height: 35px;
+    background-color: #4169E1;
+    animation: orbit 10s linear infinite;
+}
+
+/* Mars */
+.orbit-mars {
+    width: 500px;
+    height: 500px;
+}
+
+.mars {
+    width: 25px;
+    height: 25px;
+    background-color: #CD5C5C;
+    animation: orbit 18.8s linear infinite;
+}
+
+/* Jupiter */
+.orbit-jupiter {
+    width: 600px;
+    height: 600px;
+}
+
+.jupiter {
+    width: 80px;
+    height: 80px;
+    background-color: #DEB887;
+    animation: orbit 43.2s linear infinite;
+}
+
+/* Saturn */
+.orbit-saturn {
+    width: 700px;
+    height: 700px;
+}
+
+.saturn {
+    width: 70px;
+    height: 70px;
+    background-color: #F4A460;
+    animation: orbit 60s linear infinite;
+}
+
+@keyframes orbit {
+    from {
+        transform: rotate(0deg) translateX(calc(var(--orbit-radius) / 2)) rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg) translateX(calc(var(--orbit-radius) / 2)) rotate(-360deg);
+    }
+} 
